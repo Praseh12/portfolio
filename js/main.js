@@ -1,24 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // 🌗 Theme toggle functionality
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = themeToggle.querySelector('i');
-
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.classList.add('dark-theme');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-    }
-
-    themeToggle.addEventListener('click', function () {
-        document.body.classList.toggle('dark-theme');
-        const isDark = document.body.classList.contains('dark-theme');
-
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        themeIcon.classList.toggle('fa-moon', !isDark);
-        themeIcon.classList.toggle('fa-sun', isDark);
-    });
-
     // 📱 Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
@@ -52,13 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // 🚫 EmailJS logic temporarily removed to avoid errors
-});
-document.addEventListener('DOMContentLoaded', function () {
-    // ... your existing code here ...
-
-    // 📍 Typing Animation START (paste this at the end)
-    const phrases = ["Web Developer", "Software Developer", "CSIT Student"];
+    // 📍 Typing Animation
+    const phrases = ["Web Developer.", "Software Developer.", "CSIT Student."];
     const typedText = document.getElementById("typed-text");
     const cursor = document.querySelector(".cursor");
     let i = 0;
@@ -104,5 +79,4 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     loop();
-    // 📍 Typing Animation END
 });
